@@ -20,7 +20,7 @@ helm upgrade [RELEASE_NAME] [CHART] --install --namespace [NAMESPACE]
 
 #### List of Helm Charts with small Description
 
-1. [ESO - External Secrets Operator](./eso)
+1. [ESO - External Secrets Operator](./eso/Readme.md)
 
 This is a helm chart to deploy on an EKS cluster once ESO is installed
 This helm chart will create 
