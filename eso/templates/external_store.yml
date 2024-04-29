@@ -1,0 +1,30 @@
+{{- if .Values.secretManagerStore.enabled -}}
+---
+apiVersion: external-secrets.io/v1beta1
+kind: SecretStore
+metadata:
+  name: secretstore-sample
+  namespace: {{ .Values.namespace | default "portals" }}
+spec:
+  provider:
+    aws:
+      service: SecretsManager
+      region: {{ .Values.secretManagerStore.region }}
+
+{{ end}}
+
+
+{{- if .Values.ssm.enabled -}}
+
+---
+apiVersion: external-secrets.io/v1beta1
+kind: SecretStore
+metadata:
+  name: secretstore-awssm
+  namespace: {{ .Values.namespace | default "portals" }}
+spec:
+  provider:
+    aws:
+      service: ParameterStore
+      region: {{ .Values.ssm.region }}
+{{- end}}

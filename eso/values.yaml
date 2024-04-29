@@ -1,0 +1,29 @@
+namespace: portals
+env: dummy
+prefix: "wsp"
+refreshInterval: 5m
+secretManagerStore:
+  enabled: true
+  region: us-east-1
+  buildSecretName: true
+  secrets: 
+  # The format is kubernetes secretname:SecretManagerNamewithoutprefix
+  # The key in secret is key used in secretmanagersecret .
+    k8secret1: awssecretname1  
+    k8secret2: awssecretname1
+
+ssm:
+  enabled: true
+  region: us-east-1
+  params:
+    k8secretname1:
+    # The format is SecretKey:ParameterStoreNameWithoutPrefix
+      secretkeyname1: parameterstorename1
+      secretkeyname2: parameterstorename2
+      secretkeyname3: parameterstorename3
+
+    k8secretname2:
+      secretkeyname4: parameterstorename4
+      secretkeyname5: parameterstorename5
+      secretkeyname6: parameterstorename6
+      
