@@ -1,4 +1,4 @@
-### This repo consists of different Helm Charts I have written
+### This repo consists of subset of different Helm Charts I have written.
 I try to make these helm charts better whenever I get time 
 
 ### Basic Helm Chart Commands
